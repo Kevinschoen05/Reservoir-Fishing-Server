@@ -9,7 +9,20 @@ const recordSchema = mongoose.Schema({
         type: Date, 
         default: Date.now()
     },
-    comment: String
+    image: {
+        type: String,
+        require: false 
+    },
+    comment: String,
+    latitude:{
+        type: String,
+        require: false
+    },
+    longitude:{
+        type: String,
+        require: false
+    },
+
 
 })
 module.exports = mongoose.model("Record", recordSchema)
